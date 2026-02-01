@@ -226,8 +226,18 @@ const timelineData = [
              
             >
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-              <XAxis dataKey="priority" axisLine={false} tickLine={false}   tick={{  fontFamily: "sans-serif",   fontWeight: 500, fontSize: 12,lineHeight: "16px",letterSpacing: "-0.24px",textAlign: "center",  verticalAlign: "middle" 
-  }}/>
+              <XAxis
+  dataKey="priority"
+  axisLine={false}
+  tickLine={false}
+  tick={{
+    fontFamily: "sans-serif",
+    fontWeight: 500,
+    fontSize: 12,
+    letterSpacing: "-0.24px",
+    textAnchor: "middle" // centers text horizontally
+  }}
+/>
               
               <Tooltip />
               <Bar dataKey="todo" stackId="a" fill={COLORS.todo}  barSize={48}  radius={[4, 4, 0, 0]} stroke="#FFFFFF" strokeWidth={1} opacity={1} />
