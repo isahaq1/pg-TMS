@@ -9,7 +9,7 @@
     COPY package.json package-lock.json* yarn.lock* ./
     
     # Install dependencies
-    RUN npm ci || npm install
+    RUN npm install --legacy-peer-deps || npm install
     
     # Copy source code
     COPY . .
