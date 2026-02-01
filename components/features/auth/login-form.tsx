@@ -1,5 +1,5 @@
 export default function LoginPage() {
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     // Handle login logic here
   };
