@@ -129,3 +129,10 @@ client/
 
 MIT
 "# pg-TMS" 
+
+## 🐳 Run Using Docker Compose
+
+Build and start the container:
+
+```bash
+docker-compose up --build
