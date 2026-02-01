@@ -94,7 +94,7 @@ export  function CompanyForm() {
     const file = event.target.files?.[0];
     if (file) {
       if (file.size > 5 * 1024 * 1024) {
-        toast.error("File size should be less than 5MB");
+        console.log("File size should be less than 5MB");
         return;
       }
       
@@ -118,7 +118,7 @@ export  function CompanyForm() {
   const onSubmit = (data: CompanyFormData) => {
     console.log("Form Data:", data);
     console.log("Logo File:", logoFile);
-    toast.success("Company created successfully!");
+    console.log("Company created successfully!");
     
     // Reset form
     reset();
@@ -128,7 +128,7 @@ export  function CompanyForm() {
   const handleCancel = () => {
     reset();
     handleRemoveLogo();
-    toast.info("Form cleared");
+    console.log("Form cleared");
   };
 
   return (
