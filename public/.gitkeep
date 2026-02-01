@@ -1,0 +1,18 @@
+# Public Assets Directory
+
+This directory should contain the following image files:
+
+- canteen.png - Canteen workspace icon
+- central-panel.png - Control panel icon
+- create-new.png - Create new password illustration
+- dashboard.png - Dashboard workspace icon
+- designer-working.png - Login page illustration
+- document.png - Document workspace icon
+- jesser.png - Jesser workspace icon
+- loading.png - Loading screen image
+- logo.png - Paragon group logo
+- paragon.png - Paragon workspace icon
+- reset-pass.png - Reset password illustration
+- task-n-ticket.png - Task & ticket icon
+
+Please add these image files to this directory.
