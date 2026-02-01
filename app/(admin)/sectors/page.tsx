@@ -67,8 +67,8 @@ export default function App() {
   };
 
   return (
-    <div className="flex min-h-[60vh] w-full overflow-x-hidden">
-      <div className="w-full p-4 sm:p-5 md:p-6 max-w-full">
+    <div className="flex min-h-[60vh] w-full">
+      <div className="w-full p-[12px]">
         <div className="flex flex-col gap-2">
           <TableHeader
             selectedSector={selectedSector}

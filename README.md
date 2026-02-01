@@ -54,68 +54,49 @@ npm run dev
 ## Project Structure
 
 ```
-client/
-├── app/                                # Next.js app router (routes)
-│   ├── create-new/                     # Create new password route
-│   │   └── page.tsx                    # Create new password page
-│   ├── favicon.ico                     # App favicon
-│   ├── globals.css                     # Global styles
-│   ├── layout.tsx                      # Root layout
-│   └── page.tsx                        # Home page (login)
-├── components/                         # React components
-│   ├── common/                         # Common reusable components
-│   │   └── loading-screen.tsx          # Loading screen component
-│   ├── features/                       # Feature-specific components
-│   │   ├── auth/                       # Authentication components
-│   │   │   ├── login-form.tsx          # Login, forgot password, check inbox
-│   │   │   └── login-illustration.tsx  # Login illustration SVG
-│   │   ├── dashboard/                  # Dashboard components
-│   │   │   ├── dashboard-page.tsx      # Main dashboard page
-│   │   │   └── empty-state.tsx         # Empty state component
-│   │   └── workspace/                  # Workspace components
-│   │       ├── workspace-card.tsx      # Workspace card component
-│   │       └── workspace-selection.tsx # Workspace selection page
-│   ├── layout/                         # Layout components
-│   │   ├── dashboard-layout.tsx        # Dashboard layout wrapper
-│   │   ├── header.tsx                  # Header component
-│   │   └── sidebar.tsx                 # Sidebar component
-│   └── ui/                             # shadcn/ui components
-│       ├── button.tsx                  # Button component
-│       ├── input.tsx                   # Input component
-│       └── label.tsx                   # Label component
-├── config/                             # Configuration files
-│   └── site.ts                         # Site configuration
-├── constants/                          # Application constants
-│   └── index.ts                        # routes, API endpoints, etc.
-├── hooks/                              # Custom React hooks
-│   └── use-password-toggle.ts           # Password toggle hook
-├── lib/                                # Utility functions
-│   └── utils.ts                        # Helper functions (cn, etc.)
-├── public/                             # Static assets
-│   ├── canteen.png                     # Canteen workspace icon
-│   ├── central-panel.png               # Control panel icon
-│   ├── create-new.png                  # Create new password illustration
-│   ├── dashboard.png                   # Dashboard workspace icon
-│   ├── designer-working.png            # Login page illustration
-│   ├── document.png                    # Document workspace icon
-│   ├── jesser.png                      # Jesser workspace icon
-│   ├── loading.png                     # Loading screen image
-│   ├── logo.png                        # Paragon group logo
-│   ├── paragon.png                     # Paragon workspace icon
-│   ├── reset-pass.png                  # Reset password illustration
-│   └── task-n-ticket.png               # Task & ticket icon
-├── types/                              # TypeScript type definitions
-│   ├── index.ts                        # General types
-│   ├── navigation.ts                   # Navigation types
-│   └── workspace.ts                    # Workspace types
-├── components.json                     # shadcn/ui configuration
-├── .eslintrc.cjs                       # ESLint configuration
-├── next-env.d.ts                       # Next.js TypeScript declarations
-├── next.config.mjs                     # Next.js configuration
-├── package.json                        # Dependencies and scripts
-├── postcss.config.cjs                  # PostCSS configuration
-├── README.md                           # Project documentation
-└── tsconfig.json                       # TypeScript configuration
+.
+├── app/                                  # Next.js app router
+│   ├── (admin)/                          # Admin protected routes
+│   │   ├── blank/                        # Blank page
+│   │   ├── companies/                    # Company management
+│   │   ├── dashboard/                    # Dashboard view
+│   │   ├── projects/                     # Project management
+│   │   ├── sectors/                      # Sector management
+│   │   ├── tasks/                        # Task management
+│   │   └── layout.tsx                    # Admin layout
+│   ├── auth/                             # Authentication routes
+│   │   └── login/                        # Login page
+│   ├── create-new/                       # Create new entry route
+│   ├── globals.css                       # Global styles
+│   ├── layout.tsx                        # Root layout
+│   └── page.tsx                          # Landing/Entry page
+├── components/                           # React components
+│   ├── common/                           # Shared common components
+│   ├── features/                         # Feature-specific component
+│   │   ├── auth/                         # Authentication features
+│   │   ├── company/                      # Company features
+│   │   ├── dashboard/                    # Dashboard features
+│   │   ├── projects/                     # Project features
+│   │   ├── sector/                       # Sector features
+│   │   ├── tasks/                        # Task features
+│   │   └── workspace/                    # Workspace features
+│   ├── layout/                           # Layout components
+│   ├── table/                            # Table components
+│   ├── ui/                               # Reusable UI components
+│   └── theme-provider.tsx                # Theme provider
+├── config/                               # Configuration files
+├── constants/                            # Constants
+├── hooks/                                # Custom hooks
+├── lib/                                  # Utility functions
+├── public/                               # Static assets
+├── services/                             # API services
+├── types/                                # TypeScript type definitions
+├── .env.local                            # Local environment variables
+├── components.json                       # shadcn/ui configuration
+├── next.config.mjs                       # Next.js configuration
+├── package.json                          # Dependencies and scripts
+├── tailwind.config.ts                    # Tailwind CSS configuration
+└── tsconfig.json                         # TypeScript configuration
 ```
 
 ## Available Scripts

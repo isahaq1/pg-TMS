@@ -30,9 +30,10 @@ export function TablePagination({
   const endItem = Math.min(currentPage * pageSize, totalItems);
 
   return (
-    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between w-full py-3 border-t border-border gap-3 sm:gap-0">
-      <div className="flex items-center gap-1 w-full sm:w-[350.6667px]">
-        <span className="font-sans w-[64px] font-medium text-[14px] leading-[20px] tracking-[-0.28px] text-muted-foreground">
+    <div className="flex items-center justify-between w-full py-3 border-t border-[rgba(0,0,0,0.05)]">
+      
+      <div className="flex items-center gap-1 w-[350.6667px]">
+        <span className="font-sans w-[64px]  font-medium text-[14px] leading-[20px]  tracking-[-0.28px]  text-[#0000008C]">
           Page Size
         </span>
         <Select 
@@ -52,12 +53,12 @@ export function TablePagination({
       </div>
 
       <div className="flex items-center gap-2">
-        <span className="font-sans font-medium text-[14px] leading-[20px] tracking-[-0.28px] text-muted-foreground">
+        <span className="font-sans  font-medium text-[14px]  leading-[20px] tracking-[-0.28px] text-[#0000008C]">
           {startItem} to {endItem} of {totalItems}
         </span>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center sm:justify-end gap-2 font-sans font-medium text-[14px] leading-[20px] tracking-[-0.28px] text-muted-foreground">
+      <div className="flex items-center gap-2 font-sans  font-medium text-[14px]  leading-[20px] tracking-[-0.28px] text-[#0000008C]">
         <Button
           variant="ghost"
           size="icon"
@@ -65,7 +66,7 @@ export function TablePagination({
           onClick={() => onPageChange(1)}
           disabled={currentPage === 1}
         >
-          <ArrowLeftDoubleIcon className="h-4 w-4 text-muted-foreground" />
+          <ArrowLeftDoubleIcon className="h-4 w-4 text-[#737373]" />
           <span className="sr-only">First page</span>
         </Button>
         <Button
@@ -75,11 +76,11 @@ export function TablePagination({
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          <ArrowLeft01Icon className="h-4 w-4 text-muted-foreground" />
+          <ArrowLeft01Icon className="h-4 w-4 text-[#737373]" />
           <span className="sr-only">Previous page</span>
         </Button>
         
-        <span className="text-sm font-medium text-muted-foreground tracking-[-0.28px]">
+        <span className="text-sm font-medium text-[rgba(0,0,0,0.55)] tracking-[-0.28px]">
           Page {currentPage} of {totalPages}
         </span>
 
@@ -90,7 +91,7 @@ export function TablePagination({
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
-          <ArrowRight01Icon className="h-4 w-4 text-muted-foreground" />
+          <ArrowRight01Icon className="h-4 w-4 text-[#737373]" />
           <span className="sr-only">Next page</span>
         </Button>
         <Button
@@ -100,7 +101,7 @@ export function TablePagination({
           onClick={() => onPageChange(totalPages)}
           disabled={currentPage === totalPages}
         >
-          <ArrowRightDoubleIcon className="h-4 w-4 text-muted-foreground" />
+          <ArrowRightDoubleIcon className="h-4 w-4 text-[#737373]" />
           <span className="sr-only">Last page</span>
         </Button>
       </div>
