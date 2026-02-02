@@ -39,10 +39,10 @@ export function SectorTable({ data, onSort, sortColumn, sortDirection }: SectorT
   return (
     <div className="w-full rounded-md border border-[rgba(0,0,0,0.05)]">
       {/* Table Header */}
-      <div className="bg-[#f6f6f8] flex h-[40px] items-center rounded-t-md">
+      <div className="bg-[#F6F6F8] flex h-[40px] items-center rounded-t-md">
         <div className="flex-1 flex items-center gap-3 pl-3 pr-5 py-2 border-r border-[rgba(0,0,0,0.05)]">
-          <span className="flex-1 text-sm font-medium text-[rgba(0,0,0,0.55)]">
-            Sector name
+          <span className="flex-1 font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
+            Sector Name
           </span>
           <button onClick={() => onSort?.('sectorName')} className="cursor-pointer">
             <SortIcon column="sectorName" />
@@ -50,7 +50,7 @@ export function SectorTable({ data, onSort, sortColumn, sortDirection }: SectorT
         </div>
 
         <div className="w-[264px] flex items-center gap-3 pl-3 pr-5 py-2 border-r border-[rgba(0,0,0,0.05)]">
-          <span className="flex-1 text-sm font-medium text-[rgba(0,0,0,0.55)]">
+          <span className="flex-1 font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
             Total Companies
           </span>
           <button onClick={() => onSort?.('totalCompanies')} className="cursor-pointer">
@@ -59,7 +59,7 @@ export function SectorTable({ data, onSort, sortColumn, sortDirection }: SectorT
         </div>
 
         <div className="w-[264px] flex items-center gap-3 px-3 py-2 border-r border-[rgba(0,0,0,0.05)]">
-          <span className="flex-1 text-sm font-medium text-[rgba(0,0,0,0.55)]">
+          <span className="flex-1 font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
             Status
           </span>
           <button onClick={() => onSort?.('status')} className="cursor-pointer">
@@ -68,7 +68,7 @@ export function SectorTable({ data, onSort, sortColumn, sortDirection }: SectorT
         </div>
 
         <div className="w-[76px] flex items-center gap-3 pl-3 pr-5 py-2">
-          <span className="text-sm font-medium text-[rgba(0,0,0,0.55)]">
+          <span className="font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
             Action
           </span>
         </div>

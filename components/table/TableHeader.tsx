@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import Image from "next/image";
 import Link from "next/link";
-import {Add01Icon, Factory02Icon, LayoutTable01Icon, Sorting05Icon } from "hugeicons-react";
+import {Add01Icon, Factory02Icon, LayoutTable01Icon, Sorting05Icon,UnfoldLessIcon } from "hugeicons-react";
 import {
   Select,
   SelectContent,
@@ -75,10 +75,10 @@ export function TableHeader({
           <div className="p-[4px] border border-[rgba(0,0,0,0.05)] rounded-md">
             <Select value={selectedSector} onValueChange={onSectorChange}>
               <SelectTrigger className="h-[28px] border-0 shadow-none gap-1 px-2 text-sm font-medium text-[#242529]">
-                <Factory02Icon className="h-3.5 w-3.5" />
-                <SelectValue placeholder="All Sector" />
+                <Factory02Icon size={14} />
+                <SelectValue placeholder="All Sector"  className="font-sans text-sm leading-5 font-medium tracking-normal align-middle text-[#242529] "/>
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="font-sans text-sm leading-5 font-medium tracking-normal align-middle text-[#242529] ">
                 <SelectItem value="all">All Sector</SelectItem>
                 <SelectItem value="oil-gas">Oil & Gas</SelectItem>
                 <SelectItem value="materials">Basic Materials</SelectItem>
@@ -127,13 +127,13 @@ export function TableHeader({
         </Button>
 
         <div className="flex items-center gap-2">
-          <div className="flex items-center w-[67px]  h-[28px] flex gap-[6px] px-[6px] py-[4px] rounded-[6px] border border-[#0000000D] bg-[#FFFFFF] opacity-100 shadow-[0px_1px_3px_0px_#FFFFFF14,0px_0px_2px_0px_#FFFFFF]">
-          <Sorting05Icon className="h-4 w-4" />
+          <div className=" w-[67px] h-[28px]  flex items-center gap-1.5 px-[6px] py-1 bg-white opacity-100 rounded-[6px]  border border-[#0000000D]  shadow-[0_1px_3px_0_rgba(255,255,255,0.08),0_0_2px_0_rgba(255,255,255,1)]">
+          <Sorting05Icon size={16} className="text-[#0000008C]" />
             <span className="font-inter font-normal text-[12px] leading-[24px] tracking-normal text-[#0000008C]">Sort</span>
           </div>
-          <div className="flex items-center gap-1.5 bg-white h-7 rounded-md border border-[rgba(0,0,0,0.05)] shadow-[0px_0px_2px_0px_white,0px_1px_3px_0px_rgba(255,255,255,0.08)] px-1.5 py-1">
+          <div className="h-[28px]  flex items-center gap-1.5 px-[6px] py-1 bg-white opacity-100 rounded-[6px]  border border-[#0000000D]  shadow-[0_1px_3px_0_rgba(255,255,255,0.08),0_0_2px_0_rgba(255,255,255,1)]">
             
-            <LayoutTable01Icon className="h-4 w-4"/>
+            <LayoutTable01Icon size={16} className="text-[#0000008C]"/>
             <span className="font-inter font-normal text-[12px] leading-[24px] tracking-normal text-[#0000008C]">View</span>
           </div>
         </div>

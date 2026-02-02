@@ -1,4 +1,4 @@
-import {Loading03Icon,OfficeChairIcon,ArrowUpDownIcon,ArrowLeft01Icon,DepartementIcon,UserGroup03Icon,Link04Icon,Location01Icon,Calendar04Icon,Cancel01Icon,ArrowExpand01Icon,MoreVerticalIcon} from "hugeicons-react";
+import {Loading03Icon,OfficeChairIcon,ArrowUpDownIcon,ArrowLeft01Icon,DepartementIcon,UserGroup03Icon,Link04Icon,Location01Icon,Calendar04Icon,Cancel01Icon,ArrowExpand01Icon,MoreVerticalIcon,UnfoldLessIcon} from "hugeicons-react";
 import { Button } from "../ui/button";
 import { StatusBadge } from "./StatusBadge";
 import { TableActions } from "./TableActions";
@@ -44,53 +44,53 @@ export function CompanyTable({ data, onSort, sortColumn, sortDirection }: Compan
       <div className="hidden sm:block w-full rounded-md border border-border overflow-x-auto">
         <div className="overflow-x-auto">
           {/* Table Header */}
-          <div className="bg-muted flex h-[40px] items-center rounded-t-md min-w-max">
+          <div className="bg-[#F6F6F8] flex h-[40px] items-center rounded-t-md min-w-max">
             <div className="min-w-[180px] flex-1 flex items-center gap-2 pl-3 pr-3 py-2 border-r border-border">
-              <span className="flex-1 text-sm font-medium text-muted-foreground whitespace-nowrap">
+              <span className="flex-1 font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
                 Company name
               </span>
               <button onClick={() => onSort?.('companyName')} className="cursor-pointer shrink-0">
-                <SortIcon column="companyName" />
+                <UnfoldLessIcon column="companyName" size={14} className="font-material-symbols text-base leading-4 font-normal tracking-normal"/>
               </button>
             </div>
 
             <div className="w-[140px] md:w-[180px] xl:w-[220px] flex items-center gap-2 pl-3 pr-3 py-2 border-r border-border">
-              <span className="flex-1 text-sm font-medium text-muted-foreground whitespace-nowrap">
+              <span className="flex-1 font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
                 Branches
               </span>
               <button onClick={() => onSort?.('totalBranches')} className="cursor-pointer shrink-0">
-                <SortIcon column="totalBranches" />
+                <UnfoldLessIcon column="totalBranches" size={14} className="font-material-symbols text-base leading-4 font-normal tracking-normal"/>
               </button>
             </div>
             
             <div className="w-[140px] md:w-[180px] xl:w-[220px] flex items-center gap-2 pl-3 pr-3 py-2 border-r border-border">
-              <span className="flex-1 text-sm font-medium text-muted-foreground whitespace-nowrap">
+              <span className="flex-1 font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
                 Departments
               </span>
               <button onClick={() => onSort?.('totalDepartments')} className="cursor-pointer shrink-0">
-                <SortIcon column="totalDepartments" />
+                <UnfoldLessIcon column="totalDepartments" size={14} className="font-material-symbols text-base leading-4 font-normal tracking-normal"/>
               </button>
             </div>
             <div className="w-[140px] md:w-[180px] xl:w-[220px] flex items-center gap-2 pl-3 pr-3 py-2 border-r border-border">
-              <span className="flex-1 text-sm font-medium text-muted-foreground whitespace-nowrap">
+              <span className="flex-1 font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
                 Total Users
               </span>
               <button onClick={() => onSort?.('totalUsers')} className="cursor-pointer shrink-0">
-                <SortIcon column="totalUsers" />
+                <UnfoldLessIcon column="totalUsers" size={14} className="font-material-symbols text-base leading-4 font-normal tracking-normal"/>
               </button>
             </div>
 
             <div className="w-[120px] md:w-[150px] xl:w-[180px] flex items-center gap-2 px-3 py-2 border-r border-border">
-              <span className="flex-1 text-sm font-medium text-muted-foreground whitespace-nowrap">
+              <span className="flex-1 font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
                 Status
               </span>
               <button onClick={() => onSort?.('status')} className="cursor-pointer shrink-0">
-                <SortIcon column="status" />
+                <UnfoldLessIcon column="status" size={14} className="font-material-symbols text-base leading-4 font-normal tracking-normal"/>
               </button>
             </div>
 
             <div className="w-[70px] flex items-center justify-center gap-2 pl-3 pr-3 py-2">
-              <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">
+              <span className="font-sans text-sm leading-5 font-medium tracking-normal text-black/55">
                 Action
               </span>
             </div>

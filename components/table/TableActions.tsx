@@ -23,7 +23,7 @@ export function TableActions({ onEdit, onDelete, onView }: TableActionsProps) {
           <span className="sr-only">Actions</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="bg-white">
         {onView && <DropdownMenuItem onClick={onView}>View</DropdownMenuItem>}
         {onEdit && <DropdownMenuItem onClick={onEdit}>Edit</DropdownMenuItem>}
         {onDelete && (
