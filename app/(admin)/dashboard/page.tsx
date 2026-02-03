@@ -27,7 +27,8 @@ import {
   Line,
   CartesianGrid,
   RadialBarChart,
-  RadialBar,
+  AreaChart,
+  Area
 } from "recharts";
 
 
@@ -206,38 +207,33 @@ export default function DashboardPage() {
             </div>
           </div>
           <ResponsiveContainer width="100%" height={250}>
-            <LineChart data={timelineData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-            
-              <Tooltip
-                content={({ active, payload }) => {
-                  if (active && payload && payload.length) {
-                    return (
-                      <div className="bg-card border border-border rounded-lg p-3 shadow-lg">
-                        <p className="text-sm font-semibold">
-                          Dec 14, 25
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          Task Completed
-                        </p>
-                        <p className="text-sm font-medium mt-1">
-                          {payload[0].value}/12
-                        </p>
-                      </div>
-                    );
-                  }
-                  return null;
-                }}
-              />
-              <Line
-                type="monotone"
-                dataKey="tasks"
-                stroke="#3B82F6"
-                strokeWidth={2}
-                dot={{ fill: "#3B82F6", r: 4 }}
-                activeDot={{ r: 6 }}
-              />
-            </LineChart>
+          <AreaChart data={timelineData}>
+    <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+    <Tooltip
+      content={({ active, payload }) => {
+        if (active && payload && payload.length) {
+          return (
+            <div className="bg-card border border-border rounded-lg p-3 shadow-lg">
+              <p className="text-sm font-semibold">Dec 14, 25</p>
+              <p className="text-xs text-muted-foreground">Task Completed</p>
+              <p className="text-sm font-medium mt-1">{payload[0].value}/12</p>
+            </div>
+          );
+        }
+        return null;
+      }}
+    />
+    <Area
+      type="monotone"
+      dataKey="tasks"
+      stroke="#3B82F6"
+      strokeWidth={2}
+      fill="#E4F5F5"
+      fillOpacity={0.3}
+      dot={{ fill: "#3B82F6", r: 4 }}
+      activeDot={{ r: 6 }}
+    />
+  </AreaChart>
           </ResponsiveContainer>
           <div className="flex items-center gap-2 mt-4 text-xs text-muted-foreground">
             <Info size={14} />

@@ -40,16 +40,16 @@ export function TableHeader<T>({ columns, onSort, sortConfig }: TableHeaderProps
         {columns.map((column, index) => (
           <th
             key={String(column.field)}
-            className={`md:px-6 md:py-3 font-sans text-sm leading-5 font-medium tracking-normal  text-black/55 tracking-wider border border-[#0000000D] whitespace-nowrap ${getAlignmentClass(
+            className={`md:px-6 md:py-3 font-sans text-sm leading-5 font-medium tracking-normal  text-black/55 tracking-wider border border-[#0000000D] whitespace-nowrap h-[40px] ${getAlignmentClass(
               column.align
             )} ${column.width || ''}`}
           >
             {column.isSortable ? (
               <button
                 onClick={() => handleSort(column)}
-                className="flex items-center gap-2 hover:text-gray-900 transition-colors focus:outline-none focus:text-gray-900 w-full"
+                className="flex justify-between  gap-2 hover:text-gray-900 transition-colors focus:outline-none focus:text-gray-900 w-full"
               >
-                <span className='font-sans text-sm leading-5 font-medium tracking-normal text-black/55 tracking-wider whitespace-nowrap'>{column.name}</span>
+                <span className='font-sans items-center text-sm leading-5 font-medium tracking-normal text-black/55 tracking-wider whitespace-nowrap'>{column.name}</span>
                 {getSortIcon(column.field)}
               </button>
             ) : (

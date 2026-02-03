@@ -213,10 +213,12 @@ export  function CompanyForm() {
               Company Name *
             </Label>
             <Input
-              {...register("name")}
+            
               type="text"
               placeholder="Enter company name"
-              className=""
+            
+               {...register("name")}
+                className={errors.name ? "border-red-500" : ""}
             />
             {errors.name && (
               <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>
